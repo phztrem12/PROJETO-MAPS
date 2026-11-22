@@ -165,6 +165,11 @@ input:focus,select:focus{outline:1px solid var(--gold);border-color:var(--gold)}
 @keyframes introLine{from{transform:scaleX(.05);opacity:.2}to{transform:scaleX(1);opacity:1}}
 @keyframes introLeave{to{opacity:0;visibility:hidden}}
 @media(prefers-reduced-motion:reduce){.intro-screen{animation:none;display:none}.intro-line{animation:none}}
+
+/* Fotografia da abertura mais escura, mantendo posição e transição */
+.hero img.scene{filter:brightness(.38) saturate(.82) drop-shadow(0 22px 34px rgba(0,0,0,.58))}
+@media(max-width:760px){.hero img.scene{filter:brightness(.34) saturate(.8) drop-shadow(0 18px 28px rgba(0,0,0,.62))}}
+
 </style>
 </head>
 <body>

@@ -2,31 +2,361 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>MAPS VEÍCULOS | Batatais – SP</title>
 <meta name="description" content="MAPS VEÍCULOS, concessionária em Batatais – SP. Veículos selecionados, negociação transparente e atendimento personalizado.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0e0e10;--bg2:#161619;--line:#2c2c31;--tx:#f4f2ee;--mut:#9d9a94;--gold:#c9a45c;--gold2:#e6cc94;--wa:#25d366;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Outfit',sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--bg);color:var(--tx);font:300 17px/1.65 var(--sans);overflow-x:hidden}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}section{padding:100px 0}h1,h2,h3{font-family:var(--serif);line-height:1.05;margin:0}header{position:fixed;inset:0 0 auto;z-index:10;transition:.3s}header.solid{background:#0e0e10ed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.logo{font:700 25px var(--serif);letter-spacing:.12em}.logo b,.gold{color:var(--gold)}.logo small{display:block;font:400 9px var(--sans);letter-spacing:.5em;color:var(--mut)}nav ul{display:flex;gap:28px;list-style:none;padding:0}nav a{font-size:12px;letter-spacing:.12em;text-transform:uppercase}.btn{display:inline-flex;justify-content:center;padding:14px 25px;border:1px solid var(--gold);color:var(--gold2);font-size:12px;letter-spacing:.14em;text-transform:uppercase;transition:.25s}.btn:hover,.btn.solid{background:var(--gold);color:#111}.hero{min-height:100svh;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 75% 75%,#382d16,transparent 55%),linear-gradient(#09090a,#17171a);padding-top:100px}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 15%,transparent 80%)}.hero .wrap{position:relative;z-index:1}.hero h1{font-size:clamp(58px,10vw,130px);letter-spacing:.05em}.hero h2{font-size:clamp(28px,4vw,48px);font-style:italic;margin:24px 0 12px}.hero p{max-width:460px;color:#ccc;margin-bottom:30px}.hero-art{position:absolute;right:-4%;bottom:9%;width:min(850px,80vw);height:220px;border:2px solid #6d5b36;border-radius:60% 30% 20% 15%;transform:skewX(-14deg);opacity:.22;box-shadow:0 20px 60px #c9a45c}.hero-art:before,.hero-art:after{content:"";position:absolute;bottom:-40px;width:90px;height:90px;border:9px solid #999;border-radius:50%;background:#111}.hero-art:before{left:15%}.hero-art:after{right:15%}.head{max-width:650px;margin-bottom:42px}.head h2{font-size:clamp(38px,5vw,64px)}.head p,.muted{color:var(--mut)}.line{height:2px;width:60px;background:var(--gold);margin-bottom:20px}#estoque,#local{background:var(--bg2)}.filters{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:28px}.filters button{background:none;border:1px solid var(--line);color:var(--mut);padding:10px 18px;cursor:pointer}.filters button.on{background:var(--gold);color:#111;border-color:var(--gold)}.note{padding:10px 15px;border-left:2px solid var(--gold);background:#202024;color:var(--mut);font-size:14px;margin-bottom:25px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}.card{background:#0e0e10;border:1px solid var(--line);transition:.3s}.card:hover{transform:translateY(-5px);border-color:var(--gold)}.photo{height:190px;display:grid;place-items:center;background:radial-gradient(ellipse,#51401d,#18181b);font-size:58px}.cb{padding:20px}.cb h3{font-size:28px}.spec{display:grid;grid-template-columns:1fr 1fr;gap:8px;color:var(--mut);font-size:13px;padding:12px 0}.price{font:600 30px var(--serif);color:var(--gold2);margin:10px 0}.about,.loc{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about-art{min-height:360px;background:radial-gradient(ellipse,#473718,#141416);border:1px solid var(--line);display:grid;place-items:center;font-size:100px}.values{display:flex;gap:9px;flex-wrap:wrap;margin-top:25px}.values span{border:1px solid var(--line);padding:7px 13px;font-size:13px}.difs{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line)}.dif{padding:28px;background:var(--bg);border-right:1px solid var(--line)}.dif h3{font-size:24px;margin:12px 0}.dif p{font-size:14px;color:var(--mut)}address{font-style:normal;font-size:19px;line-height:1.8}.map iframe{width:100%;height:430px;border:0}.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.wa{border-color:var(--wa);color:var(--wa)}footer{padding:55px 0;border-top:1px solid var(--line);color:var(--mut)}.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.fab{position:fixed;right:20px;bottom:20px;z-index:9;background:var(--wa);color:#06210f;border-radius:50%;width:58px;height:58px;display:grid;place-items:center;font-size:25px;box-shadow:0 5px 25px #0008}.reveal{opacity:0;transform:translateY(25px);transition:.8s}.reveal.on{opacity:1;transform:none}dialog{background:#19191d;color:var(--tx);border:1px solid var(--gold);width:min(700px,94vw);max-height:90vh}dialog::backdrop{background:#000b}.admin{padding:22px}form{display:grid;grid-template-columns:1fr 1fr;gap:12px}label{font-size:12px;color:var(--mut)}input,select{display:block;width:100%;padding:11px;background:#0e0e10;color:white;border:1px solid var(--line);margin-top:5px}button{font:inherit}.admin-list{display:grid;gap:8px;margin:18px 0}.admin-row{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding:8px}.admin-row button{background:none;color:var(--gold2);border:1px solid var(--gold);padding:5px 9px;cursor:pointer}
-@media(max-width:800px){section{padding:75px 0}nav{display:none}.about,.loc{grid-template-columns:1fr}.difs{grid-template-columns:1fr 1fr}.dif{border-bottom:1px solid var(--line)}.hero-art{right:-30%;width:110vw;opacity:.15}}@media(max-width:520px){.difs{grid-template-columns:1fr}.hero h1{font-size:56px}.map iframe{height:350px}form{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+:root{--bg:#0e0e10;--bg2:#161619;--bg3:#1e1e22;--line:#2c2c31;--tx:#f4f2ee;--mut:#9d9a94;--gold:#c9a45c;--gold2:#e6cc94;--wa:#25d366;
+--serif:'Cormorant Garamond',Georgia,serif;--sans:'Outfit',system-ui,-apple-system,Segoe UI,sans-serif;color-scheme:dark;box-sizing:border-box;
+padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--tx);font:300 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.05;margin:0}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+section{padding:110px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 30px;border:1px solid var(--gold);color:var(--gold2);font:500 13px/1 var(--sans);letter-spacing:.16em;cursor:pointer;background:none;transition:.25s;text-transform:uppercase}
+.btn:hover{background:var(--gold);color:#111}
+.btn.solid{background:var(--gold);color:#111}.btn.solid:hover{background:var(--gold2)}
+.btn.wa{border-color:var(--wa);color:var(--wa)}.btn.wa:hover{background:var(--wa);color:#08210f}
+:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:transform .35s,background .3s}
+header.solid{background:rgba(14,14,16,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.hide{transform:translateY(-100%)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font:700 25px/1 var(--serif);letter-spacing:.14em}.logo b{color:var(--gold);font-weight:700}
+.logo small{display:block;font:400 9px/1 var(--sans);letter-spacing:.5em;color:var(--mut);margin-top:5px}
+nav ul{display:flex;gap:34px;list-style:none;margin:0;padding:0}
+nav a{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#d8d5cf;position:relative;padding:6px 0}
+nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:.3s}
+nav a:hover::after{width:100%}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger i{display:block;height:1.5px;background:var(--tx);margin:7px 10px;transition:.3s}
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:center;position:relative;overflow:hidden;padding:130px 0 90px;background:radial-gradient(ellipse at 70% 80%,#2b2412 0,transparent 55%),linear-gradient(180deg,#0a0a0b,#141417)}
+.hero svg.scene{position:absolute;right:-6%;bottom:2%;width:min(980px,96vw);opacity:.95;will-change:transform}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 18%,transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-size:clamp(54px,9vw,128px);letter-spacing:.06em}
+.hero h1 span{color:var(--gold)}
+.hero h2{font-size:clamp(26px,3.6vw,46px);font-weight:500;margin:26px 0 12px;font-style:italic}
+.hero p{max-width:470px;color:#cfccc5;margin:0 0 36px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.in{opacity:0;transform:translateY(22px);animation:in .9s cubic-bezier(.2,.7,.2,1) forwards}
+.in:nth-child(2){animation-delay:.15s}.in:nth-child(3){animation-delay:.3s}.in:nth-child(4){animation-delay:.45s}
+@keyframes in{to{opacity:1;transform:none}}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.on{opacity:1;transform:none}
+.head{margin-bottom:50px;max-width:640px}
+.head h2{font-size:clamp(38px,5vw,64px);letter-spacing:.03em}
+.head p{color:var(--mut);margin:14px 0 0}
+.gold-line{width:64px;height:2px;background:var(--gold);margin-bottom:22px}
+/* estoque */
+#estoque{background:var(--bg2)}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px}
+.filters button{padding:11px 22px;background:none;border:1px solid var(--line);color:var(--mut);font:400 13px var(--sans);letter-spacing:.1em;cursor:pointer;transition:.25s;text-transform:uppercase}
+.filters button:hover{color:var(--tx);border-color:var(--gold)}
+.filters button.on{background:var(--gold);border-color:var(--gold);color:#111;font-weight:500}
+.demo-note{border-left:2px solid var(--gold);padding:10px 16px;color:var(--mut);font-size:14px;margin-bottom:30px;background:var(--bg3)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:26px}
+.card{background:var(--bg);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .35s,border-color .35s;animation:in .6s both}
+.card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.ph{aspect-ratio:16/10;background:radial-gradient(ellipse at 50% 100%,#33290f,#18181b 70%);position:relative;overflow:hidden}
+.ph svg{width:100%;height:100%;transition:transform .6s}.card:hover .ph svg{transform:scale(1.05)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.tag{position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:.14em;padding:5px 9px;background:rgba(0,0,0,.65);border:1px solid var(--gold);color:var(--gold2);text-transform:uppercase}
+.tag.t2{left:auto;right:12px;border-color:var(--line);color:var(--mut)}
+.cb{padding:22px 22px 24px;display:flex;flex-direction:column;gap:14px;flex:1}
+.cb h3{font-size:27px}.cb h3 small{display:block;font:400 12px var(--sans);letter-spacing:.18em;color:var(--gold);text-transform:uppercase;margin-bottom:4px}
+.spec{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;font-size:14px;color:var(--mut);margin:0;padding:0;list-style:none}
+.spec b{color:var(--tx);font-weight:400}
+.price{font:600 32px var(--serif);color:var(--gold2);margin-top:auto}
+.empty{grid-column:1/-1;padding:50px;text-align:center;color:var(--mut);border:1px dashed var(--line)}
+/* sobre */
+.about{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center}
+.about .art{aspect-ratio:4/5;background:radial-gradient(ellipse at 50% 85%,#3a2e12,#131316 70%);border:1px solid var(--line);position:relative;overflow:hidden}
+.about .art svg{position:absolute;left:-30%;bottom:12%;width:170%}
+.about h2{font-size:clamp(36px,4.6vw,60px);margin-bottom:26px}
+.vals{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.vals span{border:1px solid var(--line);padding:8px 16px;font-size:14px;color:#dcd8d0}
+/* diferenciais */
+.difs{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.dif{background:var(--bg);padding:42px 28px;transition:background .3s}
+.dif:hover{background:var(--bg3)}
+.dif svg{width:44px;height:44px;stroke:var(--gold);fill:none;stroke-width:1.3;margin-bottom:24px;transition:transform .4s}
+.dif:hover svg{transform:translateY(-5px)}
+.dif h3{font-size:26px;margin-bottom:10px}.dif p{margin:0;color:var(--mut);font-size:15px}
+/* mapa */
+#local{background:var(--bg2)}
+.loc{display:grid;grid-template-columns:.8fr 1.4fr;gap:44px}
+.loc address{font-style:normal;font-size:19px;line-height:1.7;margin-bottom:26px}
+.loc address b{font:600 28px var(--serif);display:block;letter-spacing:.06em}
+.btns{display:flex;flex-direction:column;gap:12px;max-width:300px}
+.map{min-height:460px;border:1px solid var(--line);background:var(--bg3)}
+.map iframe{width:100%;height:100%;min-height:460px;border:0;display:block}
+/* footer */
+footer{padding:70px 0 30px;border-top:1px solid var(--line);font-size:15px;color:var(--mut)}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:46px}
+footer h4{font:500 12px var(--sans);letter-spacing:.2em;color:var(--tx);text-transform:uppercase;margin:0 0 16px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+footer a:hover{color:var(--gold2)}
+.copy{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--line);padding-top:24px;font-size:13px}
+.copy button{background:none;border:0;color:var(--mut);cursor:pointer;font:inherit;text-decoration:underline}
+/* whatsapp flutuante */
+.fab{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));width:62px;height:62px;border-radius:50%;background:var(--wa);display:grid;place-items:center;z-index:60;box-shadow:0 8px 28px rgba(0,0,0,.5);transition:transform .25s}
+.fab:hover{transform:scale(1.08)}
+.fab svg{width:32px;height:32px;fill:#fff}
+/* admin */
+dialog{background:var(--bg2);color:var(--tx);border:1px solid var(--gold);padding:0;width:min(760px,94vw);max-height:90vh}
+dialog::backdrop{background:rgba(0,0,0,.75)}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:20px 26px;border-bottom:1px solid var(--line)}
+.dh h3{font-size:30px}.x{background:none;border:0;color:var(--tx);font-size:30px;cursor:pointer;line-height:1;width:44px;height:44px}
+.db{padding:22px 26px 28px;overflow:auto;max-height:calc(90vh - 80px)}
+.alist{display:grid;gap:8px;margin-bottom:26px}
+.arow{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 14px;background:var(--bg);border:1px solid var(--line);font-size:15px}
+.arow div{display:flex;gap:8px;flex-shrink:0}
+.sm{padding:8px 14px;font-size:11px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:grid;gap:6px;font-size:12px;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
+label.full,.full{grid-column:1/-1}
+input,select{background:var(--bg);border:1px solid var(--line);color:var(--tx);padding:12px;font:400 15px var(--sans);width:100%}
+input:focus,select:focus{outline:1px solid var(--gold);border-color:var(--gold)}
+.chk{display:flex;align-items:center;gap:10px;text-transform:none;letter-spacing:0;font-size:15px;color:var(--tx)}.chk input{width:auto}
+.hint{font-size:13px;color:var(--mut);margin:0 0 18px}
+@media(max-width:960px){
+ section{padding:80px 0}
+ .about,.loc{grid-template-columns:1fr;gap:36px}.about .art{aspect-ratio:16/10}.about .art svg{left:-10%;width:120%;bottom:5%}
+ .difs{grid-template-columns:1fr 1fr}.fg{grid-template-columns:1fr 1fr}.fg>div:first-child{grid-column:1/-1}
+}
+@media(max-width:760px){
+ .burger{display:block}
+ nav{position:fixed;inset:0 0 0 auto;width:min(300px,82vw);background:var(--bg2);border-left:1px solid var(--line);transform:translateX(100%);transition:transform .35s;padding:100px 30px}
+ nav.open{transform:none}nav ul{flex-direction:column;gap:22px}
+ .hero svg.scene{right:-45%;bottom:6%;width:150vw;opacity:.55}
+ .hero::after{background:linear-gradient(0deg,var(--bg) 8%,transparent 70%),linear-gradient(90deg,rgba(14,14,16,.7),transparent)}
+ .difs{grid-template-columns:1fr}.fg{grid-template-columns:1fr}form{grid-template-columns:1fr}
+ .btns{max-width:none}.cta .btn{flex:1 1 100%}.map,.map iframe{min-height:380px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.in,.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<header id="header"><div class="wrap nav"><a href="#inicio" class="logo">MAPS <b>VEÍCULOS</b><small>BATATAIS · SP</small></a><nav><ul><li><a href="#inicio">Início</a></li><li><a href="#estoque">Estoque</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#diferenciais">Diferenciais</a></li><li><a href="#local">Localização</a></li></ul></nav></div></header>
+<header id="top">
+ <div class="wrap nav">
+  <a href="#inicio" class="logo" aria-label="MAPS VEÍCULOS">MAPS<b> VEÍCULOS</b><small>BATATAIS · SP</small></a>
+  <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><i></i><i></i></button>
+  <nav id="menu" aria-label="Principal"><ul>
+   <li><a href="#inicio">Início</a></li><li><a href="#estoque">Estoque</a></li><li><a href="#sobre">Sobre</a></li>
+   <li><a href="#diferenciais">Diferenciais</a></li><li><a href="#local">Localização</a></li>
+  </ul></nav>
+ </div>
+</header>
+
 <main>
-<section class="hero" id="inicio"><div class="hero-art"></div><div class="wrap"><h1>MAPS<br><span class="gold">VEÍCULOS</span></h1><h2>Seu próximo carro está aqui.</h2><p>Qualidade, confiança e as melhores oportunidades para você.</p><a class="btn solid" href="#estoque">Ver estoque</a> <a class="btn" href="#local">Fale conosco</a></div></section>
-<section id="estoque"><div class="wrap"><div class="head reveal"><div class="line"></div><h2>NOSSO ESTOQUE</h2><p>Escolha seu próximo veículo e fale diretamente com nossa equipe.</p></div><div class="filters" id="filters"></div><div class="note" id="note">Os veículos exibidos são demonstrativos. Cadastre os veículos reais em “Gerenciar estoque”, no rodapé.</div><div class="grid" id="grid"></div></div></section>
-<section id="sobre"><div class="wrap about"><div class="about-art reveal">🚘</div><div class="reveal"><div class="line"></div><h2>MAIS QUE VENDER CARROS, REALIZAMOS CONQUISTAS.</h2><p>A MAPS VEÍCULOS atende Batatais e região com um princípio simples: o cliente precisa sair daqui seguro da escolha que fez. Cada negociação é conduzida com clareza e transparência.</p><div class="values"><span>Transparência</span><span>Confiança</span><span>Qualidade</span><span>Atendimento personalizado</span></div></div></div></section>
-<section id="diferenciais" style="background:var(--bg2)"><div class="wrap"><div class="head reveal"><div class="line"></div><h2>POR QUE A MAPS</h2></div><div class="difs reveal"><div class="dif">✦<h3>Atendimento personalizado</h3><p>Entendemos o que você procura.</p></div><div class="dif">◇<h3>Veículos selecionados</h3><p>Qualidade em cada escolha.</p></div><div class="dif">✓<h3>Negociação transparente</h3><p>Condições explicadas com clareza.</p></div><div class="dif">♡<h3>Compromisso</h3><p>Sua satisfação é nossa prioridade.</p></div></div></div></section>
-<section id="local"><div class="wrap"><div class="head reveal"><div class="line"></div><h2>VENHA NOS VISITAR</h2></div><div class="loc reveal"><div><address><b>MAPS VEÍCULOS</b><br>Avenida 14 de Março, 520<br>Vila Maria<br>Batatais – SP<br>CEP 14315-734</address><p>Telefone: <a class="gold" href="tel:+551637618249">(16) 3761-8249</a></p><div class="btns"><a class="btn solid" target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=MAPS+Veiculos%2C+Avenida+14+de+Marco%2C+520%2C+Batatais%2C+SP">Como chegar</a><a class="btn wa" target="_blank" href="https://wa.me/551637618249">WhatsApp</a><a class="btn" href="tel:+551637618249">Ligar agora</a></div></div><div class="map"><iframe title="Mapa MAPS Veículos" loading="lazy" allowfullscreen src="https://www.google.com/maps?q=MAPS+Veiculos%2C+Avenida+14+de+Marco%2C+520%2C+Batatais%2C+SP%2C+Brasil&output=embed"></iframe></div></div></div></section>
+<section class="hero" id="inicio">
+ <svg class="scene" id="scene" viewBox="0 0 900 360" aria-hidden="true">
+  <defs><linearGradient id="gb" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#3b3b42"/><stop offset="1" stop-color="#0d0d0f"/></linearGradient>
+  <linearGradient id="gl" x1="0" x2="1"><stop offset="0" stop-color="#c9a45c" stop-opacity="0"/><stop offset="1" stop-color="#e6cc94"/></linearGradient>
+  <radialGradient id="gh"><stop offset="0" stop-color="#fff6d8"/><stop offset="1" stop-color="#fff6d8" stop-opacity="0"/></radialGradient></defs>
+  <ellipse cx="450" cy="318" rx="420" ry="20" fill="#000" opacity=".6"/>
+  <rect x="0" y="322" width="900" height="1.5" fill="url(#gl)" opacity=".7"/>
+  <path d="M40 262c4-34 36-46 90-52l120-62c26-14 54-20 120-20h120c60 0 98 14 138 56l102 22c42 8 62 20 62 52v18c0 14-8 20-24 20h-30a58 58 0 0 0-116 0H284a58 58 0 0 0-116 0H62c-16 0-24-8-22-34z" fill="url(#gb)" stroke="#55555d" stroke-width="1.5"/>
+  <path d="M262 150c20-10 40-14 96-14h112c40 0 66 12 94 44l-12 4H238z" fill="#08080a" stroke="#4a4a52"/>
+  <path d="M60 232c140-10 560-10 790 2" stroke="#c9a45c" stroke-width="1.5" fill="none" opacity=".8"/>
+  <circle cx="226" cy="278" r="50" fill="#0a0a0b" stroke="#6a6a72" stroke-width="3"/><circle cx="226" cy="278" r="26" fill="#2a2a2f" stroke="#c9a45c"/>
+  <circle cx="694" cy="278" r="50" fill="#0a0a0b" stroke="#6a6a72" stroke-width="3"/><circle cx="694" cy="278" r="26" fill="#2a2a2f" stroke="#c9a45c"/>
+  <circle cx="858" cy="226" r="70" fill="url(#gh)"/><path d="M820 222l54 4-6 12-48-4z" fill="#fff6d8"/>
+  <path d="M858 232L1200 300V150z" fill="url(#gl)" opacity=".12"/>
+ </svg>
+ <div class="wrap">
+  <h1 class="in">MAPS<br><span>VEÍCULOS</span></h1>
+  <h2 class="in">Seu próximo carro está aqui.</h2>
+  <p class="in">Qualidade, confiança e as melhores oportunidades para você.</p>
+  <div class="cta in"><a class="btn solid" href="#estoque">Ver estoque</a><a class="btn" href="#local">Fale conosco</a></div>
+ </div>
+</section>
+
+<section id="estoque"><div class="wrap">
+ <div class="head rv"><div class="gold-line"></div><h2>NOSSO ESTOQUE</h2><p>Escolha o veículo, toque em “Tenho interesse” e fale direto com a nossa equipe.</p></div>
+ <div class="filters rv" id="filters" role="group" aria-label="Filtrar veículos"></div>
+ <div class="demo-note rv" id="demoNote" hidden>Os veículos abaixo são dados demonstrativos e não fazem parte do estoque real. Cadastre os veículos verdadeiros em “Gerenciar estoque”, no rodapé.</div>
+ <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="sobre"><div class="wrap about">
+ <div class="art rv" id="parallaxArt">
+  <svg viewBox="0 0 900 360" aria-hidden="true"><use href="#scene"/></svg>
+ </div>
+ <div class="rv">
+  <div class="gold-line"></div>
+  <h2>MAIS QUE VENDER CARROS, REALIZAMOS CONQUISTAS.</h2>
+  <p>A MAPS VEÍCULOS atende Batatais e região com um princípio simples: o cliente precisa sair daqui seguro da escolha que fez. Cada veículo é selecionado com critério, e cada negociação é conduzida com clareza, sem letras miúdas.</p>
+  <p>Do primeiro contato à entrega das chaves, você conversa com uma equipe que conhece o carro, explica as condições e respeita o seu tempo.</p>
+  <div class="vals"><span>Transparência</span><span>Confiança</span><span>Qualidade</span><span>Atendimento personalizado</span><span>Compromisso com o cliente</span></div>
+ </div>
+</div></section>
+
+<section id="diferenciais" style="background:var(--bg2)"><div class="wrap">
+ <div class="head rv"><div class="gold-line"></div><h2>POR QUE A MAPS</h2></div>
+ <div class="difs rv">
+  <div class="dif"><svg viewBox="0 0 48 48"><circle cx="24" cy="15" r="8"/><path d="M8 42c0-9 7-15 16-15s16 6 16 15"/></svg><h3>Atendimento personalizado</h3><p>Entendemos o que você procura e indicamos o carro certo para o seu uso e orçamento.</p></div>
+  <div class="dif"><svg viewBox="0 0 48 48"><path d="M24 4l16 6v12c0 11-7 18-16 22C15 40 8 33 8 22V10z"/><path d="M16 24l6 6 11-12"/></svg><h3>Veículos selecionados</h3><p>Cada carro passa por avaliação antes de entrar no estoque.</p></div>
+  <div class="dif"><svg viewBox="0 0 48 48"><path d="M6 24l10-10 8 6 10-8 8 8"/><path d="M14 30l6 6 4-3 6 5 8-8"/><path d="M6 24l8 6"/></svg><h3>Negociação transparente</h3><p>Valores, condições e documentação explicados com clareza, do início ao fim.</p></div>
+  <div class="dif"><svg viewBox="0 0 48 48"><path d="M24 41S6 30 6 17a9 9 0 0 1 18-3 9 9 0 0 1 18 3c0 13-18 24-18 24z"/></svg><h3>Compromisso com a satisfação</h3><p>Seguimos ao seu lado depois da compra. Sua satisfação é o nosso resultado.</p></div>
+ </div>
+</div></section>
+
+<section id="local"><div class="wrap">
+ <div class="head rv"><div class="gold-line"></div><h2>VENHA NOS VISITAR</h2></div>
+ <div class="loc rv">
+  <div>
+   <address><b>MAPS VEÍCULOS</b>Avenida 14 de Março, 520<br>Vila Maria<br>Batatais – SP<br>CEP 14315-734</address>
+   <p style="margin:-10px 0 24px">Telefone: <a href="tel:+551637618249" style="color:var(--gold2)">(16) 3761-8249</a></p>
+   <div class="btns">
+    <a class="btn solid" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=MAPS+Ve%C3%ADculos%2C+Avenida+14+de+Mar%C3%A7o%2C+520%2C+Batatais%2C+SP%2C+Brasil">Como chegar</a>
+    <a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/551637618249">WhatsApp</a>
+    <a class="btn" href="tel:+551637618249">Ligar agora</a>
+   </div>
+  </div>
+  <div class="map"><iframe title="Mapa: MAPS Veículos, Avenida 14 de Março, 520, Batatais" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=MAPS+Ve%C3%ADculos%2C+Avenida+14+de+Mar%C3%A7o%2C+520%2C+Batatais%2C+SP%2C+Brasil&output=embed&hl=pt-BR"></iframe></div>
+ </div>
+</div></section>
 </main>
-<footer><div class="wrap foot"><div><div class="logo">MAPS <b>VEÍCULOS</b></div>Avenida 14 de Março, 520 · Batatais – SP</div><div>Telefone: (16) 3761-8249<br><a href="https://wa.me/551637618249">WhatsApp</a></div><div>© <span id="year"></span> MAPS VEÍCULOS<br><button id="adminOpen" style="background:none;border:0;color:var(--gold2);cursor:pointer">Gerenciar estoque</button></div></div></footer>
-<a class="fab" href="https://wa.me/551637618249?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MAPS%20Ve%C3%ADculos" target="_blank" aria-label="WhatsApp">✆</a>
-<dialog id="admin"><div class="admin"><div style="display:flex;justify-content:space-between"><h2>Gerenciar estoque</h2><button id="adminClose">✕</button></div><p class="muted">Os veículos cadastrados ficam salvos neste navegador.</p><div class="admin-list" id="adminList"></div><h3 id="formTitle">Adicionar veículo</h3><form id="carForm"><label>Marca<input name="marca" required></label><label>Modelo<input name="modelo" required></label><label>Ano<input name="ano" type="number" required></label><label>Quilometragem<input name="km" type="number" required></label><label>Motor<input name="motor" required></label><label>Câmbio<select name="cambio"><option>Automático</option><option>Manual</option><option>CVT</option></select></label><label>Combustível<select name="comb"><option>Flex</option><option>Gasolina</option><option>Diesel</option><option>Híbrido</option><option>Elétrico</option></select></label><label>Categoria<select name="cat"><option value="suv">SUV</option><option value="sedan">Sedan</option><option value="hatch">Hatch</option><option value="picape">Picape</option></select></label><label>Preço<input name="preco" type="number" required></label><label>Foto (URL)<input name="foto" type="url"></label><button class="btn solid" type="submit">Salvar veículo</button></form></div></dialog>
+
+<footer><div class="wrap">
+ <div class="fg">
+  <div><div class="logo" style="margin-bottom:16px">MAPS<b> VEÍCULOS</b></div>Avenida 14 de Março, 520 · Vila Maria<br>Batatais – SP · CEP 14315-734</div>
+  <div><h4>Contato</h4><ul><li><a href="tel:+551637618249">(16) 3761-8249</a></li><li><a target="_blank" rel="noopener" href="https://wa.me/551637618249">WhatsApp</a></li></ul></div>
+  <div><h4>Navegação</h4><ul><li><a href="#inicio">Início</a></li><li><a href="#estoque">Estoque</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#diferenciais">Diferenciais</a></li><li><a href="#local">Localização</a></li></ul></div>
+ </div>
+ <div class="copy"><span>© <span id="yr">2026</span> MAPS VEÍCULOS. Todos os direitos reservados.</span><button id="openAdmin">Gerenciar estoque</button></div>
+</div></footer>
+
+<a class="fab" target="_blank" rel="noopener" href="https://wa.me/551637618249?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20MAPS%20Ve%C3%ADculos." aria-label="Falar no WhatsApp">
+ <svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11 19.8L3 29l6.400-1.700A13 13 0 1 0 16 3zm0 2.400A10.600 10.600 0 1 1 10.800 25l-.5-.3-3.800 1 1-3.700-.3-.5A10.600 10.600 0 0 1 16 5.400zm-4 5.300c-.3 0-.7.100-1 .5-.4.400-1.300 1.300-1.300 3.100s1.400 3.700 1.600 3.900c.2.300 2.600 4.100 6.400 5.600 3.100 1.200 3.800 1 4.400.9.700-.1 2.200-.9 2.500-1.800.3-.9.300-1.600.2-1.800l-.7-.4-2.400-1.200c-.3-.1-.6-.2-.8.200l-1.100 1.400c-.2.200-.4.300-.7.100-.4-.2-1.500-.5-2.800-1.700-1-.9-1.700-2-1.900-2.400-.2-.4 0-.5.200-.7l.5-.6.4-.6c.1-.2 0-.4 0-.6l-1.100-2.600c-.3-.7-.6-.6-.8-.6z"/></svg>
+</a>
+
+<dialog id="adm">
+ <div class="dh"><h3>Gerenciar estoque</h3><button class="x" id="closeAdmin" aria-label="Fechar">×</button></div>
+ <div class="db">
+  <p class="hint">As alterações ficam salvas neste navegador. Para o estoque ser o mesmo para todos os visitantes, o cadastro precisa ser ligado a um banco de dados.</p>
+  <div class="alist" id="alist"></div>
+  <h3 style="font-size:26px;margin-bottom:14px" id="fTitle">Adicionar veículo</h3>
+  <form id="vf">
+   <label>Marca<input name="marca" required></label><label>Modelo<input name="modelo" required></label>
+   <label>Ano<input name="ano" type="number" min="1980" max="2030" required></label><label>Quilometragem (km)<input name="km" type="number" min="0" required></label>
+   <label>Motorização<input name="motor" placeholder="Ex.: 2.0 Flex" required></label>
+   <label>Câmbio<select name="cambio"><option>Automático</option><option>Manual</option><option>CVT</option><option>Automatizado</option></select></label>
+   <label>Combustível<select name="comb"><option>Flex</option><option>Gasolina</option><option>Diesel</option><option>Híbrido</option><option>Elétrico</option></select></label>
+   <label>Categoria<select name="cat"><option value="suv">SUV</option><option value="sedan">Sedan</option><option value="hatch">Hatch</option><option value="picape">Picape</option></select></label>
+   <label>Preço (R$)<input name="preco" type="number" min="0" step="100" required></label>
+   <label>Cor do veículo<input name="cor" type="color" value="#9a9a9f"></label>
+   <label class="full">Foto (opcional)<input name="foto" type="file" accept="image/*"></label>
+   <label class="chk full"><input name="semi" type="checkbox" checked> Seminovo</label>
+   <div class="full" style="display:flex;gap:12px;flex-wrap:wrap"><button class="btn solid" type="submit" id="fSave">Salvar veículo</button><button class="btn" type="button" id="fCancel" hidden>Cancelar edição</button></div>
+  </form>
+ </div>
+</dialog>
+
 <script>
-(()=>{const wa='551637618249',key='maps_estoque';const demo=[{id:'d1',marca:'Exemplo',modelo:'SUV Demonstrativo',ano:2021,km:42000,motor:'1.5 Turbo',cambio:'Automático',comb:'Flex',cat:'suv',preco:119900,demo:true},{id:'d2',marca:'Exemplo',modelo:'Sedan Demonstrativo',ano:2020,km:58000,motor:'2.0',cambio:'Automático',comb:'Flex',cat:'sedan',preco:98500,demo:true}];let cars=JSON.parse(localStorage.getItem(key)||'null')||demo,filter='todos',editing=null;const $=s=>document.querySelector(s),brl=n=>Number(n).toLocaleString('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0}),cats={todos:'Todos',semi:'Seminovos',suv:'SUVs',sedan:'Sedans',hatch:'Hatch',picape:'Picapes'};function save(){localStorage.setItem(key,JSON.stringify(cars))}function render(){ $('#note').hidden=!cars.some(c=>c.demo);$('#filters').innerHTML=Object.entries(cats).map(([k,v])=>'<button data-filter="'+k+'" class="'+(filter===k?'on':'')+'">'+v+'</button>').join('');const list=cars.filter(c=>filter==='todos'||(filter==='semi'?c.semi:c.cat===filter));$('#grid').innerHTML=list.length?list.map(c=>'<article class="card"><div class="photo">'+(c.foto?'<img src="'+c.foto+'" alt="'+c.marca+' '+c.modelo+'" style="width:100%;height:100%;object-fit:cover">':'🚘')+'</div><div class="cb"><h3>'+c.marca+' '+c.modelo+'</h3><div class="spec"><span>Ano: '+c.ano+'</span><span>Km: '+Number(c.km).toLocaleString('pt-BR')+'</span><span>Motor: '+c.motor+'</span><span>Câmbio: '+c.cambio+'</span><span>Combustível: '+c.comb+'</span></div><div class="price">'+brl(c.preco)+'</div><a class="btn wa" target="_blank" href="https://wa.me/'+wa+'?text='+encodeURIComponent('Olá! Tenho interesse no '+c.marca+' '+c.modelo+' '+c.ano+'.')+'">Tenho interesse</a></div></article>').join(''):'<p>Nenhum veículo nesta categoria.</p>';$('#adminList').innerHTML=cars.map(c=>'<div class="admin-row"><span>'+c.marca+' '+c.modelo+' '+c.ano+'</span><span><button data-edit="'+c.id+'">Editar</button> <button data-del="'+c.id+'">Excluir</button></span></div>').join('')}$('#filters').addEventListener('click',e=>{if(e.target.dataset.filter){filter=e.target.dataset.filter;render()}});$('#adminOpen').onclick=()=>{$('#admin').showModal();render()};$('#adminClose').onclick=()=>$('#admin').close();$('#adminList').onclick=e=>{if(e.target.dataset.del){cars=cars.filter(c=>c.id!==e.target.dataset.del);save();render()}if(e.target.dataset.edit){const c=cars.find(x=>x.id===e.target.dataset.edit);editing=c.id;Object.keys(c).forEach(k=>{if($('#carForm').elements[k])$('#carForm').elements[k].value=c[k]});$('#formTitle').textContent='Editar veículo'}};$('#carForm').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target),c=Object.fromEntries(f.entries());c.id=editing||'v'+Date.now();c.ano=+c.ano;c.km=+c.km;c.preco=+c.preco;if(editing)cars=cars.map(x=>x.id===editing?c:x);else cars.unshift(c);editing=null;save();e.target.reset();$('#formTitle').textContent='Adicionar veículo';render()};const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));addEventListener('scroll',()=>$('#header').classList.toggle('solid',scrollY>40),{passive:true});$('#year').textContent=new Date().getFullYear();render()})();
+(function(){
+const WA='551637618249', KEY='maps_estoque_v1';
+const $=s=>document.querySelector(s);
+const brl=n=>Number(n).toLocaleString('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0});
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const CATS={todos:'Todos',semi:'Seminovos',suv:'SUVs',sedan:'Sedans',hatch:'Hatch',picape:'Picapes'};
+const DEMO=[
+ {id:'d1',demo:1,marca:'Marca Exemplo',modelo:'SUV Demonstrativo',ano:2021,km:42000,motor:'1.5 Turbo',cambio:'Automático',comb:'Flex',cat:'suv',semi:1,preco:119900,cor:'#8c8f96'},
+ {id:'d2',demo:1,marca:'Marca Exemplo',modelo:'Sedan Demonstrativo',ano:2020,km:58000,motor:'2.0',cambio:'Automático',comb:'Flex',cat:'sedan',semi:1,preco:98500,cor:'#2b2b30'},
+ {id:'d3',demo:1,marca:'Marca Exemplo',modelo:'Hatch Demonstrativo',ano:2022,km:27000,motor:'1.0 Turbo',cambio:'Manual',comb:'Flex',cat:'hatch',semi:1,preco:74900,cor:'#a33a32'},
+ {id:'d4',demo:1,marca:'Marca Exemplo',modelo:'Picape Demonstrativa',ano:2021,km:63000,motor:'2.8 Diesel',cambio:'Automático',comb:'Diesel',cat:'picape',semi:1,preco:189900,cor:'#d9d6cf'},
+ {id:'d5',demo:1,marca:'Marca Exemplo',modelo:'SUV Compacto Demonstrativo',ano:2019,km:71000,motor:'1.6',cambio:'CVT',comb:'Flex',cat:'suv',semi:1,preco:82900,cor:'#3c5a78'},
+ {id:'d6',demo:1,marca:'Marca Exemplo',modelo:'Sedan Executivo Demonstrativo',ano:2023,km:12000,motor:'2.0 Turbo',cambio:'Automático',comb:'Gasolina',cat:'sedan',semi:0,preco:179900,cor:'#6b6155'}
+];
+let cars,filter='todos',editing=null;
+try{const s=localStorage.getItem(KEY);cars=s?JSON.parse(s):DEMO.slice()}catch(e){cars=DEMO.slice()}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(cars))}catch(e){}}
+
+function carSvg(cat,col){
+ const body={
+  suv:'M50 205c2-26 22-34 58-38l50-52c14-14 32-18 70-18h110c34 0 56 8 80 38l30 26c36 6 52 16 52 40v16H50z',
+  sedan:'M44 205c2-24 24-32 66-38l62-42c20-14 38-18 80-18h70c34 0 56 12 80 36l12 10c42 4 82 12 84 38v14H44z',
+  hatch:'M54 205c2-26 22-34 54-40l56-48c14-12 32-16 66-16h90c34 0 56 10 76 36l24 20c34 6 48 16 48 42v6H54z',
+  picape:'M44 205c2-22 20-28 52-32l44-48c12-12 28-16 56-16h46c14 0 22 6 26 20l8 28h150c22 0 38 8 52 20 8 8 12 16 12 28H44z'}[cat]||'';
+ const win={suv:'M170 120c10-8 22-10 50-10h100c22 0 38 6 54 28H150z',sedan:'M196 128c14-8 26-10 54-10h60c22 0 40 8 58 26H176z',hatch:'M176 126c10-8 22-10 46-10h76c20 0 36 8 52 28H156z',picape:'M156 134c8-8 18-10 38-10h30c8 0 12 4 14 12l4 10H146z'}[cat];
+ return `<svg viewBox="0 0 520 260" role="img" aria-label="Ilustração de ${esc(({suv:'SUV',sedan:'sedan',hatch:'hatch',picape:'picape'})[cat]||'veículo')}"><ellipse cx="260" cy="236" rx="220" ry="9" fill="#000" opacity=".55"/><path d="${body}" fill="${esc(col)}" stroke="#000" stroke-opacity=".35" stroke-width="2"/><path d="${win}" fill="#0a0a0c" opacity=".9"/><path d="M60 188h420" stroke="#fff" stroke-opacity=".18"/><g fill="#0a0a0b" stroke="#777" stroke-width="3"><circle cx="150" cy="210" r="30"/><circle cx="390" cy="210" r="30"/></g><g fill="#2a2a2f" stroke="#c9a45c"><circle cx="150" cy="210" r="14"/><circle cx="390" cy="210" r="14"/></g></svg>`;
+}
+function renderFilters(){
+ $('#filters').innerHTML=Object.entries(CATS).map(([k,v])=>`<button data-f="${k}" class="${k===filter?'on':''}" aria-pressed="${k===filter}">${v}</button>`).join('');
+}
+function render(){
+ const list=cars.filter(c=>filter==='todos'||(filter==='semi'?c.semi:c.cat===filter));
+ $('#demoNote').hidden=!cars.some(c=>c.demo);
+ $('#grid').innerHTML=list.length?list.map((c,i)=>{
+  const nome=`${c.marca} ${c.modelo} ${c.ano}`;
+  return `<article class="card" style="animation-delay:${i*60}ms"><div class="ph">${c.foto?`<img loading="lazy" alt="${esc(nome)}" src="${c.foto}">`:carSvg(c.cat,c.cor||'#888')}${c.demo?'<span class="tag">Demonstrativo</span>':''}<span class="tag t2">${c.semi?'Seminovo':'Novo'}</span></div>
+  <div class="cb"><h3><small>${esc(c.marca)}</small>${esc(c.modelo)}</h3>
+  <ul class="spec"><li>Ano<br><b>${esc(c.ano)}</b></li><li>Km<br><b>${Number(c.km).toLocaleString('pt-BR')} km</b></li><li>Motor<br><b>${esc(c.motor)}</b></li><li>Câmbio<br><b>${esc(c.cambio)}</b></li><li>Combustível<br><b>${esc(c.comb)}</b></li><li>Categoria<br><b>${esc(({suv:'SUV',sedan:'Sedan',hatch:'Hatch',picape:'Picape'})[c.cat]||c.cat)}</b></li></ul>
+  <div class="price">${brl(c.preco)}</div>
+  <a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/${WA}?text=${encodeURIComponent('Olá! Tenho interesse no '+nome+' ('+brl(c.preco)+') que vi no site da MAPS Veículos.')}">Tenho interesse</a></div></article>`}).join(''):'<div class="empty">Nenhum veículo nesta categoria no momento. Fale com a gente pelo WhatsApp e consulte novidades.</div>';
+ observe();
+}
+$('#filters').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;filter=b.dataset.f;renderFilters();render()});
+
+/* scroll: cabeçalho inteligente, parallax, reveal */
+const hd=$('#top');let lastY=0,tick=false;
+const scene=$('#scene'),art=$('#parallaxArt svg');
+function onScroll(){
+ const y=scrollY;hd.classList.toggle('solid',y>40);
+ hd.classList.toggle('hide',y>lastY&&y>400&&!$('#menu').classList.contains('open'));lastY=y;
+ if(y<innerHeight&&scene)scene.style.transform=`translateY(${y*.12}px)`;
+ tick=false;
+}
+addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});
+let io;
+function observe(){
+ if(!('IntersectionObserver' in window)){document.querySelectorAll('.rv').forEach(e=>e.classList.add('on'));return}
+ io=io||new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+ document.querySelectorAll('.rv:not(.on)').forEach(e=>io.observe(e));
+}
+/* menu mobile */
+const menu=$('#menu'),bg=$('#burger');
+bg.addEventListener('click',()=>{const o=menu.classList.toggle('open');bg.setAttribute('aria-expanded',o)});
+menu.addEventListener('click',e=>{if(e.target.closest('a')){menu.classList.remove('open');bg.setAttribute('aria-expanded',false)}});
+
+/* administração */
+const dlg=$('#adm'),form=$('#vf');
+function alist(){
+ $('#alist').innerHTML=cars.length?cars.map(c=>`<div class="arow"><span>${esc(c.marca)} ${esc(c.modelo)} ${esc(c.ano)}${c.demo?' (demo)':''}</span><div><button class="btn sm" data-e="${c.id}">Editar</button><button class="btn sm" data-r="${c.id}">Remover</button></div></div>`).join(''):'<p class="hint">Estoque vazio. Adicione o primeiro veículo abaixo.</p>';
+}
+function resetForm(){editing=null;form.reset();form.cor.value='#9a9a9f';form.semi.checked=true;$('#fTitle').textContent='Adicionar veículo';$('#fSave').textContent='Salvar veículo';$('#fCancel').hidden=true}
+$('#openAdmin').addEventListener('click',()=>{alist();dlg.showModal()});
+$('#closeAdmin').addEventListener('click',()=>dlg.close());
+$('#fCancel').addEventListener('click',resetForm);
+$('#alist').addEventListener('click',e=>{
+ const r=e.target.closest('[data-r]'),ed=e.target.closest('[data-e]');
+ if(r){const c=cars.find(x=>x.id===r.dataset.r);if(c&&confirm('Remover '+c.marca+' '+c.modelo+'?')){cars=cars.filter(x=>x.id!==c.id);save();alist();render()}}
+ if(ed){const c=cars.find(x=>x.id===ed.dataset.e);if(!c)return;editing=c.id;
+  ['marca','modelo','ano','km','motor','cambio','comb','cat','preco'].forEach(k=>form[k].value=c[k]);form.cor.value=c.cor||'#9a9a9f';form.semi.checked=!!c.semi;
+  $('#fTitle').textContent='Editar veículo';$('#fSave').textContent='Salvar alterações';$('#fCancel').hidden=false;form.scrollIntoView({behavior:'smooth'})}
+});
+function readImg(f){return new Promise(res=>{if(!f)return res(null);const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const w=Math.min(900,im.width),h=im.height*w/im.width,cv=document.createElement('canvas');cv.width=w;cv.height=h;cv.getContext('2d').drawImage(im,0,0,w,h);res(cv.toDataURL('image/jpeg',.78))};im.onerror=()=>res(null);im.src=r.result};r.onerror=()=>res(null);r.readAsDataURL(f)})}
+form.addEventListener('submit',async e=>{
+ e.preventDefault();const f=new FormData(form),foto=await readImg(form.foto.files[0]);
+ const old=cars.find(x=>x.id===editing);
+ const c={id:editing||'v'+Date.now(),marca:f.get('marca').trim(),modelo:f.get('modelo').trim(),ano:+f.get('ano'),km:+f.get('km'),motor:f.get('motor').trim(),cambio:f.get('cambio'),comb:f.get('comb'),cat:f.get('cat'),preco:+f.get('preco'),cor:f.get('cor'),semi:form.semi.checked?1:0};
+ if(old&&old.foto)c.foto=old.foto;if(foto)c.foto=foto;
+ if(editing)cars=cars.map(x=>x.id===editing?c:x);else cars.unshift(c);
+ save();resetForm();alist();render();
+});
+$('#yr').textContent=new Date().getFullYear();
+renderFilters();render();observe();onScroll();
+})();
 </script>
-</body></html>
+</body>
+</html>

@@ -38,10 +38,11 @@ nav a:hover::after{width:100%}
 .burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
 .burger i{display:block;height:1.5px;background:var(--tx);margin:7px 10px;transition:.3s}
 /* hero */
-.hero{min-height:100svh;display:flex;align-items:center;position:relative;overflow:hidden;padding:130px 0 90px;background:radial-gradient(ellipse at 70% 80%,#2b2412 0,transparent 55%),linear-gradient(180deg,#0a0a0b,#141417)}
-.hero svg.scene{position:absolute;right:-6%;bottom:2%;width:min(980px,96vw);opacity:.95;will-change:transform}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 18%,transparent 70%);pointer-events:none}
-.hero .wrap{position:relative;z-index:2}
+.track{height:245vh;position:relative}.hero{position:sticky;top:0;height:100svh;display:flex;align-items:center;overflow:hidden;padding:100px 0 60px;background:radial-gradient(ellipse at 78% 82%,#292317 0,transparent 52%),linear-gradient(180deg,#0a0a0b,#141417)}
+.hero img.scene{position:absolute;z-index:1;right:-5%;bottom:3%;width:min(1200px,98vw);height:auto;max-height:86vh;aspect-ratio:16/9;object-fit:contain;object-position:center;will-change:transform;filter:drop-shadow(0 30px 40px rgba(0,0,0,.5));clip-path:polygon(3% 56%,7% 52%,21% 47%,26% 39%,31% 22%,38% 12%,47% 5%,63% 6%,72% 15%,78% 25%,90% 30%,96% 38%,99% 49%,98% 60%,94% 66%,88% 68%,84% 62%,81% 54%,76% 52%,71% 57%,68% 68%,64% 76%,58% 78%,54% 70%,50% 62%,43% 61%,37% 68%,33% 76%,27% 76%,23% 67%,18% 63%,12% 62%,5% 62%);mask-image:linear-gradient(to bottom,transparent 0%,#000 9%,#000 88%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 9%,#000 88%,transparent 100%)}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,var(--bg) 12%,rgba(14,14,16,.88) 32%,rgba(14,14,16,.08) 72%,rgba(14,14,16,.18));pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,var(--bg) 13%,rgba(14,14,16,.72) 35%,transparent 72%),linear-gradient(0deg,var(--bg) 1%,transparent 35%);pointer-events:none}
+.hero .wrap{position:relative;z-index:3}
 .hero h1{font-size:clamp(54px,9vw,128px);letter-spacing:.06em}
 .hero h1 span{color:var(--gold)}
 .hero h2{font-size:clamp(26px,3.6vw,46px);font-weight:500;margin:26px 0 12px;font-style:italic}
@@ -56,6 +57,7 @@ nav a:hover::after{width:100%}
 .head h2{font-size:clamp(38px,5vw,64px);letter-spacing:.03em}
 .head p{color:var(--mut);margin:14px 0 0}
 .gold-line{width:64px;height:2px;background:var(--gold);margin-bottom:22px}
+#bar{position:fixed;top:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;z-index:70}
 /* estoque */
 #estoque{background:var(--bg2)}
 .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px}
@@ -67,8 +69,8 @@ nav a:hover::after{width:100%}
 .card{background:var(--bg);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .35s,border-color .35s;animation:in .6s both}
 .card:hover{transform:translateY(-6px);border-color:var(--gold)}
 .ph{aspect-ratio:16/10;background:radial-gradient(ellipse at 50% 100%,#33290f,#18181b 70%);position:relative;overflow:hidden}
-.ph svg{width:100%;height:100%;transition:transform .6s}.card:hover .ph svg{transform:scale(1.05)}
-.ph img{width:100%;height:100%;object-fit:cover}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:center 58%;transition:transform .6s}.card:hover .ph img{transform:scale(1.035)}
+.no-photo{height:100%;display:grid;place-items:center;color:var(--mut);font-size:13px}.model-kind{margin:0 0 8px;color:var(--mut);font-size:14px}.photo-credits{margin:28px 0 0;color:var(--mut);font-size:12px;line-height:1.7}.photo-credits a{color:var(--gold2);text-decoration:underline;text-underline-offset:3px}
 .tag{position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:.14em;padding:5px 9px;background:rgba(0,0,0,.65);border:1px solid var(--gold);color:var(--gold2);text-transform:uppercase}
 .tag.t2{left:auto;right:12px;border-color:var(--line);color:var(--mut)}
 .cb{padding:22px 22px 24px;display:flex;flex-direction:column;gap:14px;flex:1}
@@ -80,7 +82,7 @@ nav a:hover::after{width:100%}
 /* sobre */
 .about{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center}
 .about .art{aspect-ratio:4/5;background:radial-gradient(ellipse at 50% 85%,#3a2e12,#131316 70%);border:1px solid var(--line);position:relative;overflow:hidden}
-.about .art svg{position:absolute;left:-30%;bottom:12%;width:170%}
+.about .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 .about h2{font-size:clamp(36px,4.6vw,60px);margin-bottom:26px}
 .vals{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .vals span{border:1px solid var(--line);padding:8px 16px;font-size:14px;color:#dcd8d0}
@@ -130,14 +132,14 @@ input:focus,select:focus{outline:1px solid var(--gold);border-color:var(--gold)}
 .hint{font-size:13px;color:var(--mut);margin:0 0 18px}
 @media(max-width:960px){
  section{padding:80px 0}
- .about,.loc{grid-template-columns:1fr;gap:36px}.about .art{aspect-ratio:16/10}.about .art svg{left:-10%;width:120%;bottom:5%}
+ .about,.loc{grid-template-columns:1fr;gap:36px}.about .art{aspect-ratio:16/10}.about .art img{object-position:center}
  .difs{grid-template-columns:1fr 1fr}.fg{grid-template-columns:1fr 1fr}.fg>div:first-child{grid-column:1/-1}
 }
 @media(max-width:760px){
  .burger{display:block}
  nav{position:fixed;inset:0 0 0 auto;width:min(300px,82vw);background:var(--bg2);border-left:1px solid var(--line);transform:translateX(100%);transition:transform .35s;padding:100px 30px}
  nav.open{transform:none}nav ul{flex-direction:column;gap:22px}
- .hero svg.scene{right:-45%;bottom:6%;width:150vw;opacity:.55}
+ .hero img.scene{right:-38%;bottom:8%;width:164vw;height:auto;max-height:66vh;opacity:.8;clip-path:polygon(2% 56%,7% 52%,21% 47%,26% 39%,31% 22%,38% 12%,47% 5%,63% 6%,72% 15%,78% 25%,90% 30%,96% 38%,99% 49%,98% 60%,94% 66%,88% 68%,84% 62%,81% 54%,76% 52%,71% 57%,68% 68%,64% 76%,58% 78%,54% 70%,50% 62%,43% 61%,37% 68%,33% 76%,27% 76%,23% 67%,18% 63%,12% 62%,5% 62%)}
  .hero::after{background:linear-gradient(0deg,var(--bg) 8%,transparent 70%),linear-gradient(90deg,rgba(14,14,16,.7),transparent)}
  .difs{grid-template-columns:1fr}.fg{grid-template-columns:1fr}form{grid-template-columns:1fr}
  .btns{max-width:none}.cta .btn{flex:1 1 100%}.map,.map iframe{min-height:380px}
@@ -146,51 +148,42 @@ input:focus,select:focus{outline:1px solid var(--gold);border-color:var(--gold)}
 </style>
 </head>
 <body>
+<div id="bar"></div>
 <header id="top">
  <div class="wrap nav">
   <a href="#inicio" class="logo" aria-label="MAPS VEÍCULOS">MAPS<b> VEÍCULOS</b><small>BATATAIS · SP</small></a>
   <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><i></i><i></i></button>
   <nav id="menu" aria-label="Principal"><ul>
-   <li><a href="#inicio">Início</a></li><li><a href="#estoque">Estoque</a></li><li><a href="#sobre">Sobre</a></li>
+   <li><a href="#inicio">Início</a></li><li><a href="#estoque">Modelos</a></li><li><a href="#sobre">Sobre</a></li>
    <li><a href="#diferenciais">Diferenciais</a></li><li><a href="#local">Localização</a></li>
   </ul></nav>
  </div>
 </header>
 
 <main>
-<section class="hero" id="inicio">
- <svg class="scene" id="scene" viewBox="0 0 900 360" aria-hidden="true">
-  <defs><linearGradient id="gb" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#3b3b42"/><stop offset="1" stop-color="#0d0d0f"/></linearGradient>
-  <linearGradient id="gl" x1="0" x2="1"><stop offset="0" stop-color="#c9a45c" stop-opacity="0"/><stop offset="1" stop-color="#e6cc94"/></linearGradient>
-  <radialGradient id="gh"><stop offset="0" stop-color="#fff6d8"/><stop offset="1" stop-color="#fff6d8" stop-opacity="0"/></radialGradient></defs>
-  <ellipse cx="450" cy="318" rx="420" ry="20" fill="#000" opacity=".6"/>
-  <rect x="0" y="322" width="900" height="1.5" fill="url(#gl)" opacity=".7"/>
-  <path d="M40 262c4-34 36-46 90-52l120-62c26-14 54-20 120-20h120c60 0 98 14 138 56l102 22c42 8 62 20 62 52v18c0 14-8 20-24 20h-30a58 58 0 0 0-116 0H284a58 58 0 0 0-116 0H62c-16 0-24-8-22-34z" fill="url(#gb)" stroke="#55555d" stroke-width="1.5"/>
-  <path d="M262 150c20-10 40-14 96-14h112c40 0 66 12 94 44l-12 4H238z" fill="#08080a" stroke="#4a4a52"/>
-  <path d="M60 232c140-10 560-10 790 2" stroke="#c9a45c" stroke-width="1.5" fill="none" opacity=".8"/>
-  <circle cx="226" cy="278" r="50" fill="#0a0a0b" stroke="#6a6a72" stroke-width="3"/><circle cx="226" cy="278" r="26" fill="#2a2a2f" stroke="#c9a45c"/>
-  <circle cx="694" cy="278" r="50" fill="#0a0a0b" stroke="#6a6a72" stroke-width="3"/><circle cx="694" cy="278" r="26" fill="#2a2a2f" stroke="#c9a45c"/>
-  <circle cx="858" cy="226" r="70" fill="url(#gh)"/><path d="M820 222l54 4-6 12-48-4z" fill="#fff6d8"/>
-  <path d="M858 232L1200 300V150z" fill="url(#gl)" opacity=".12"/>
- </svg>
+<div class="track" id="inicio"><section class="hero">
+ <img class="scene" id="scene" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/2023_Hyundai_HB20_1.0_T-GDi_Platinum_Plus_%28Brazil%29_front_view_02.png/1280px-2023_Hyundai_HB20_1.0_T-GDi_Platinum_Plus_%28Brazil%29_front_view_02.png" alt="Hyundai HB20 Platinum Plus 2023, fotografia real do modelo" fetchpriority="high" decoding="async">
  <div class="wrap">
   <h1 class="in">MAPS<br><span>VEÍCULOS</span></h1>
   <h2 class="in">Seu próximo carro está aqui.</h2>
   <p class="in">Qualidade, confiança e as melhores oportunidades para você.</p>
-  <div class="cta in"><a class="btn solid" href="#estoque">Ver estoque</a><a class="btn" href="#local">Fale conosco</a></div>
+  <div class="cta in"><a class="btn solid" href="#estoque">Ver modelos</a><a class="btn" href="#local">Fale conosco</a></div>
  </div>
-</section>
+ <div class="r2" id="r2"><h2>Cada carro, escolhido com critério.</h2><p>Transparência do primeiro contato à entrega das chaves</p></div>
+ <div class="cue" id="cue">Role para conhecer</div>
+</section></div>
 
 <section id="estoque"><div class="wrap">
- <div class="head rv"><div class="gold-line"></div><h2>NOSSO ESTOQUE</h2><p>Escolha o veículo, toque em “Tenho interesse” e fale direto com a nossa equipe.</p></div>
+ <div class="head rv"><div class="gold-line"></div><h2>MODELOS PARA CONHECER</h2><p>Fotos reais de modelos conhecidos para você visualizar o estilo de cada veículo. Consulte versões e disponibilidade diretamente com a equipe.</p></div>
  <div class="filters rv" id="filters" role="group" aria-label="Filtrar veículos"></div>
- <div class="demo-note rv" id="demoNote" hidden>Os veículos abaixo são dados demonstrativos e não fazem parte do estoque real. Cadastre os veículos verdadeiros em “Gerenciar estoque”, no rodapé.</div>
+ <div class="demo-note rv" id="demoNote" hidden>Imagens de referência: estes modelos não representam o estoque atual da MAPS VEÍCULOS. Consulte a disponibilidade antes de visitar a loja.</div>
  <div class="grid" id="grid"></div>
+ <p class="photo-credits">Créditos e licenças das fotografias: <a href="https://commons.wikimedia.org/wiki/File:2023_Hyundai_HB20_1.0_T-GDi_Platinum_Plus_(Brazil)_front_view_02.png" target="_blank" rel="noopener">Hyundai HB20 2023 · Autosdeprimera</a> (<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>); <a href="https://commons.wikimedia.org/wiki/File:Chevrolet_Onix_(second_generation,_front_view).jpg" target="_blank" rel="noopener">Chevrolet Onix · Chevrolet México</a> (<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>); <a href="https://commons.wikimedia.org/wiki/File:Volkswagen_T-Cross.jpg" target="_blank" rel="noopener">Volkswagen T-Cross · DestinationFearFan</a> (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>); <a href="https://commons.wikimedia.org/wiki/File:2019-2022_Toyota_Corolla.jpg" target="_blank" rel="noopener">Toyota Corolla · TTTNIS</a> (<a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>); <a href="https://commons.wikimedia.org/wiki/File:2021_Jeep_Compass_Nighteagle_Multiair_4x2.jpg" target="_blank" rel="noopener">Jeep Compass 2021 · Calreyn88</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>). O HB20 da abertura recebe recorte visual; o enquadramento das miniaturas é ajustado para os cards. Estas fotos são referências e não indicam disponibilidade na loja.</p>
 </div></section>
 
 <section id="sobre"><div class="wrap about">
  <div class="art rv" id="parallaxArt">
-  <svg viewBox="0 0 900 360" aria-hidden="true"><use href="#scene"/></svg>
+  <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/4/47/Volkswagen_T-Cross.jpg" alt="Fotografia real do Volkswagen T-Cross">
  </div>
  <div class="rv">
   <div class="gold-line"></div>
@@ -232,7 +225,7 @@ input:focus,select:focus{outline:1px solid var(--gold);border-color:var(--gold)}
  <div class="fg">
   <div><div class="logo" style="margin-bottom:16px">MAPS<b> VEÍCULOS</b></div>Avenida 14 de Março, 520 · Vila Maria<br>Batatais – SP · CEP 14315-734</div>
   <div><h4>Contato</h4><ul><li><a href="tel:+551637618249">(16) 3761-8249</a></li><li><a target="_blank" rel="noopener" href="https://wa.me/551637618249">WhatsApp</a></li></ul></div>
-  <div><h4>Navegação</h4><ul><li><a href="#inicio">Início</a></li><li><a href="#estoque">Estoque</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#diferenciais">Diferenciais</a></li><li><a href="#local">Localização</a></li></ul></div>
+  <div><h4>Navegação</h4><ul><li><a href="#inicio">Início</a></li><li><a href="#estoque">Modelos</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#diferenciais">Diferenciais</a></li><li><a href="#local">Localização</a></li></ul></div>
  </div>
  <div class="copy"><span>© <span id="yr">2026</span> MAPS VEÍCULOS. Todos os direitos reservados.</span><button id="openAdmin">Gerenciar estoque</button></div>
 </div></footer>
@@ -244,7 +237,7 @@ input:focus,select:focus{outline:1px solid var(--gold);border-color:var(--gold)}
 <dialog id="adm">
  <div class="dh"><h3>Gerenciar estoque</h3><button class="x" id="closeAdmin" aria-label="Fechar">×</button></div>
  <div class="db">
-  <p class="hint">As alterações ficam salvas neste navegador. Para o estoque ser o mesmo para todos os visitantes, o cadastro precisa ser ligado a um banco de dados.</p>
+  <p class="hint">Os anúncios cadastrados aqui ficam salvos somente neste navegador. Para atualizar o estoque para todos os visitantes, será necessário conectar um banco de dados.</p>
   <div class="alist" id="alist"></div>
   <h3 style="font-size:26px;margin-bottom:14px" id="fTitle">Adicionar veículo</h3>
   <form id="vf">
@@ -256,7 +249,7 @@ input:focus,select:focus{outline:1px solid var(--gold);border-color:var(--gold)}
    <label>Categoria<select name="cat"><option value="suv">SUV</option><option value="sedan">Sedan</option><option value="hatch">Hatch</option><option value="picape">Picape</option></select></label>
    <label>Preço (R$)<input name="preco" type="number" min="0" step="100" required></label>
    <label>Cor do veículo<input name="cor" type="color" value="#9a9a9f"></label>
-   <label class="full">Foto (opcional)<input name="foto" type="file" accept="image/*"></label>
+   <label class="full">Foto do veículo<input name="foto" type="file" accept="image/*"></label>
    <label class="chk full"><input name="semi" type="checkbox" checked> Seminovo</label>
    <div class="full" style="display:flex;gap:12px;flex-wrap:wrap"><button class="btn solid" type="submit" id="fSave">Salvar veículo</button><button class="btn" type="button" id="fCancel" hidden>Cancelar edição</button></div>
   </form>
@@ -265,56 +258,54 @@ input:focus,select:focus{outline:1px solid var(--gold);border-color:var(--gold)}
 
 <script>
 (function(){
-const WA='551637618249', KEY='maps_estoque_v1';
+const WA='551637618249', KEY='maps_estoque_v2';
 const $=s=>document.querySelector(s);
 const brl=n=>Number(n).toLocaleString('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0});
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const CATS={todos:'Todos',semi:'Seminovos',suv:'SUVs',sedan:'Sedans',hatch:'Hatch',picape:'Picapes'};
+const CATS={todos:'Todos',suv:'SUVs',sedan:'Sedans',hatch:'Hatchbacks'};
 const DEMO=[
- {id:'d1',demo:1,marca:'Marca Exemplo',modelo:'SUV Demonstrativo',ano:2021,km:42000,motor:'1.5 Turbo',cambio:'Automático',comb:'Flex',cat:'suv',semi:1,preco:119900,cor:'#8c8f96'},
- {id:'d2',demo:1,marca:'Marca Exemplo',modelo:'Sedan Demonstrativo',ano:2020,km:58000,motor:'2.0',cambio:'Automático',comb:'Flex',cat:'sedan',semi:1,preco:98500,cor:'#2b2b30'},
- {id:'d3',demo:1,marca:'Marca Exemplo',modelo:'Hatch Demonstrativo',ano:2022,km:27000,motor:'1.0 Turbo',cambio:'Manual',comb:'Flex',cat:'hatch',semi:1,preco:74900,cor:'#a33a32'},
- {id:'d4',demo:1,marca:'Marca Exemplo',modelo:'Picape Demonstrativa',ano:2021,km:63000,motor:'2.8 Diesel',cambio:'Automático',comb:'Diesel',cat:'picape',semi:1,preco:189900,cor:'#d9d6cf'},
- {id:'d5',demo:1,marca:'Marca Exemplo',modelo:'SUV Compacto Demonstrativo',ano:2019,km:71000,motor:'1.6',cambio:'CVT',comb:'Flex',cat:'suv',semi:1,preco:82900,cor:'#3c5a78'},
- {id:'d6',demo:1,marca:'Marca Exemplo',modelo:'Sedan Executivo Demonstrativo',ano:2023,km:12000,motor:'2.0 Turbo',cambio:'Automático',comb:'Gasolina',cat:'sedan',semi:0,preco:179900,cor:'#6b6155'}
+ {id:'ref-onix',demo:1,marca:'Chevrolet',modelo:'Onix Plus · 2ª geração',ano:'Modelo de referência',cat:'sedan',foto:'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Chevrolet_Onix_%28second_generation%2C_front_view%29.jpg/960px-Chevrolet_Onix_%28second_generation%2C_front_view%29.jpg'},
+ {id:'ref-hb20',demo:1,marca:'Hyundai',modelo:'HB20 Platinum Plus 2023',ano:'2023',cat:'hatch',foto:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/2023_Hyundai_HB20_1.0_T-GDi_Platinum_Plus_%28Brazil%29_front_view_02.png/960px-2023_Hyundai_HB20_1.0_T-GDi_Platinum_Plus_%28Brazil%29_front_view_02.png'},
+ {id:'ref-tcross',demo:1,marca:'Volkswagen',modelo:'T-Cross',ano:'Modelo de referência',cat:'suv',foto:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Volkswagen_T-Cross.jpg/960px-Volkswagen_T-Cross.jpg'},
+ {id:'ref-corolla',demo:1,marca:'Toyota',modelo:'Corolla',ano:'2019–2022',cat:'sedan',foto:'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/2019-2022_Toyota_Corolla.jpg/960px-2019-2022_Toyota_Corolla.jpg'},
+ {id:'ref-compass',demo:1,marca:'Jeep',modelo:'Compass Night Eagle',ano:'2021',cat:'suv',foto:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/2021_Jeep_Compass_Nighteagle_Multiair_4x2.jpg/960px-2021_Jeep_Compass_Nighteagle_Multiair_4x2.jpg'}
 ];
 let cars,filter='todos',editing=null;
 try{const s=localStorage.getItem(KEY);cars=s?JSON.parse(s):DEMO.slice()}catch(e){cars=DEMO.slice()}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(cars))}catch(e){}}
 
-function carSvg(cat,col){
- const body={
-  suv:'M50 205c2-26 22-34 58-38l50-52c14-14 32-18 70-18h110c34 0 56 8 80 38l30 26c36 6 52 16 52 40v16H50z',
-  sedan:'M44 205c2-24 24-32 66-38l62-42c20-14 38-18 80-18h70c34 0 56 12 80 36l12 10c42 4 82 12 84 38v14H44z',
-  hatch:'M54 205c2-26 22-34 54-40l56-48c14-12 32-16 66-16h90c34 0 56 10 76 36l24 20c34 6 48 16 48 42v6H54z',
-  picape:'M44 205c2-22 20-28 52-32l44-48c12-12 28-16 56-16h46c14 0 22 6 26 20l8 28h150c22 0 38 8 52 20 8 8 12 16 12 28H44z'}[cat]||'';
- const win={suv:'M170 120c10-8 22-10 50-10h100c22 0 38 6 54 28H150z',sedan:'M196 128c14-8 26-10 54-10h60c22 0 40 8 58 26H176z',hatch:'M176 126c10-8 22-10 46-10h76c20 0 36 8 52 28H156z',picape:'M156 134c8-8 18-10 38-10h30c8 0 12 4 14 12l4 10H146z'}[cat];
- return `<svg viewBox="0 0 520 260" role="img" aria-label="Ilustração de ${esc(({suv:'SUV',sedan:'sedan',hatch:'hatch',picape:'picape'})[cat]||'veículo')}"><ellipse cx="260" cy="236" rx="220" ry="9" fill="#000" opacity=".55"/><path d="${body}" fill="${esc(col)}" stroke="#000" stroke-opacity=".35" stroke-width="2"/><path d="${win}" fill="#0a0a0c" opacity=".9"/><path d="M60 188h420" stroke="#fff" stroke-opacity=".18"/><g fill="#0a0a0b" stroke="#777" stroke-width="3"><circle cx="150" cy="210" r="30"/><circle cx="390" cy="210" r="30"/></g><g fill="#2a2a2f" stroke="#c9a45c"><circle cx="150" cy="210" r="14"/><circle cx="390" cy="210" r="14"/></g></svg>`;
-}
 function renderFilters(){
  $('#filters').innerHTML=Object.entries(CATS).map(([k,v])=>`<button data-f="${k}" class="${k===filter?'on':''}" aria-pressed="${k===filter}">${v}</button>`).join('');
 }
 function render(){
- const list=cars.filter(c=>filter==='todos'||(filter==='semi'?c.semi:c.cat===filter));
+ const list=cars.filter(c=>filter==='todos'||c.cat===filter);
  $('#demoNote').hidden=!cars.some(c=>c.demo);
  $('#grid').innerHTML=list.length?list.map((c,i)=>{
-  const nome=`${c.marca} ${c.modelo} ${c.ano}`;
-  return `<article class="card" style="animation-delay:${i*60}ms"><div class="ph">${c.foto?`<img loading="lazy" alt="${esc(nome)}" src="${c.foto}">`:carSvg(c.cat,c.cor||'#888')}${c.demo?'<span class="tag">Demonstrativo</span>':''}<span class="tag t2">${c.semi?'Seminovo':'Novo'}</span></div>
-  <div class="cb"><h3><small>${esc(c.marca)}</small>${esc(c.modelo)}</h3>
-  <ul class="spec"><li>Ano<br><b>${esc(c.ano)}</b></li><li>Km<br><b>${Number(c.km).toLocaleString('pt-BR')} km</b></li><li>Motor<br><b>${esc(c.motor)}</b></li><li>Câmbio<br><b>${esc(c.cambio)}</b></li><li>Combustível<br><b>${esc(c.comb)}</b></li><li>Categoria<br><b>${esc(({suv:'SUV',sedan:'Sedan',hatch:'Hatch',picape:'Picape'})[c.cat]||c.cat)}</b></li></ul>
-  <div class="price">${brl(c.preco)}</div>
-  <a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/${WA}?text=${encodeURIComponent('Olá! Tenho interesse no '+nome+' ('+brl(c.preco)+') que vi no site da MAPS Veículos.')}">Tenho interesse</a></div></article>`}).join(''):'<div class="empty">Nenhum veículo nesta categoria no momento. Fale com a gente pelo WhatsApp e consulte novidades.</div>';
+  const nome=`${c.marca} ${c.modelo}${c.demo?'':' '+c.ano}`;
+  const foto=c.foto?`<img loading="lazy" decoding="async" alt="${esc(nome)}" src="${esc(c.foto)}">`:'<div class="no-photo">Foto não cadastrada</div>';
+  const tipo=({suv:'SUV',sedan:'Sedan',hatch:'Hatchback',picape:'Picape'})[c.cat]||'Veículo';
+  const visual=c.demo
+   ? `<p class="model-kind">${tipo} · ${esc(c.ano)}</p><a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/${WA}?text=${encodeURIComponent('Olá! Vi o modelo '+nome+' na página da MAPS VEÍCULOS. Vocês têm algum veículo desse modelo disponível?')}">Consultar disponibilidade</a>`
+   : `<ul class="spec"><li>Ano<br><b>${esc(c.ano)}</b></li><li>Km<br><b>${Number(c.km).toLocaleString('pt-BR')} km</b></li><li>Motor<br><b>${esc(c.motor)}</b></li><li>Câmbio<br><b>${esc(c.cambio)}</b></li><li>Combustível<br><b>${esc(c.comb)}</b></li><li>Categoria<br><b>${tipo}</b></li></ul><div class="price">${brl(c.preco)}</div><a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/${WA}?text=${encodeURIComponent('Olá! Tenho interesse no '+nome+' ('+brl(c.preco)+') que vi no site da MAPS Veículos.')}">Tenho interesse</a>`;
+  return `<article class="card" style="animation-delay:${i*60}ms"><div class="ph">${foto}${c.demo?'<span class="tag">Foto de referência</span>':'<span class="tag">Anúncio</span>'}</div><div class="cb"><h3><small>${esc(c.marca)}</small>${esc(c.modelo)}</h3>${visual}</div></article>`
+ }).join(''):'<div class="empty">Nenhum modelo nesta categoria. Consulte a equipe pelo WhatsApp.</div>';
  observe();
 }
 $('#filters').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;filter=b.dataset.f;renderFilters();render()});
 
 /* scroll: cabeçalho inteligente, parallax, reveal */
 const hd=$('#top');let lastY=0,tick=false;
-const scene=$('#scene'),art=$('#parallaxArt svg');
+const scene=$('#scene'),art=$('#parallaxArt img'),tr=$('#inicio'),wrapT=$('.hero .wrap'),r2=$('#r2'),cue=$('#cue'),bar=$('#bar'),artBox=$('#parallaxArt');
 function onScroll(){
  const y=scrollY;hd.classList.toggle('solid',y>40);
  hd.classList.toggle('hide',y>lastY&&y>400&&!$('#menu').classList.contains('open'));lastY=y;
- if(y<innerHeight&&scene)scene.style.transform=`translateY(${y*.12}px)`;
+ const mx=Math.max(1,tr.offsetHeight-innerHeight),p=Math.min(1,Math.max(0,y/mx)),vw=innerWidth/100;
+ scene.style.transform=`translate3d(${-p*13*vw}px,${p*34}px,0) scale(${1+p*.62})`;
+ wrapT.style.opacity=Math.max(0,1-p*2.2);wrapT.style.transform=`translateY(${-p*90}px)`;wrapT.style.pointerEvents=p>.5?'none':'';
+ const q=Math.min(1,Math.max(0,(p-.5)*3));r2.style.opacity=q;r2.style.transform=`translateY(${(1-q)*30}px)`;
+ cue.style.opacity=Math.max(0,1-p*6);
+ bar.style.transform=`scaleX(${y/Math.max(1,document.documentElement.scrollHeight-innerHeight)})`;
+ if(art&&artBox)art.style.transform=`translateY(${artBox.getBoundingClientRect().top*-.035}px)`;
  tick=false;
 }
 addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});
@@ -332,7 +323,7 @@ menu.addEventListener('click',e=>{if(e.target.closest('a')){menu.classList.remov
 /* administração */
 const dlg=$('#adm'),form=$('#vf');
 function alist(){
- $('#alist').innerHTML=cars.length?cars.map(c=>`<div class="arow"><span>${esc(c.marca)} ${esc(c.modelo)} ${esc(c.ano)}${c.demo?' (demo)':''}</span><div><button class="btn sm" data-e="${c.id}">Editar</button><button class="btn sm" data-r="${c.id}">Remover</button></div></div>`).join(''):'<p class="hint">Estoque vazio. Adicione o primeiro veículo abaixo.</p>';
+ const ownCars=cars.filter(c=>!c.demo);$('#alist').innerHTML=ownCars.length?ownCars.map(c=>`<div class="arow"><span>${esc(c.marca)} ${esc(c.modelo)} ${esc(c.ano)}</span><div><button class="btn sm" data-e="${c.id}">Editar</button><button class="btn sm" data-r="${c.id}">Remover</button></div></div>`).join(''):'<p class="hint">Nenhum anúncio próprio cadastrado. Os modelos de referência exibidos no site não são anúncios ativos.</p>';
 }
 function resetForm(){editing=null;form.reset();form.cor.value='#9a9a9f';form.semi.checked=true;$('#fTitle').textContent='Adicionar veículo';$('#fSave').textContent='Salvar veículo';$('#fCancel').hidden=true}
 $('#openAdmin').addEventListener('click',()=>{alist();dlg.showModal()});
@@ -340,8 +331,8 @@ $('#closeAdmin').addEventListener('click',()=>dlg.close());
 $('#fCancel').addEventListener('click',resetForm);
 $('#alist').addEventListener('click',e=>{
  const r=e.target.closest('[data-r]'),ed=e.target.closest('[data-e]');
- if(r){const c=cars.find(x=>x.id===r.dataset.r);if(c&&confirm('Remover '+c.marca+' '+c.modelo+'?')){cars=cars.filter(x=>x.id!==c.id);save();alist();render()}}
- if(ed){const c=cars.find(x=>x.id===ed.dataset.e);if(!c)return;editing=c.id;
+ if(r){const c=cars.find(x=>x.id===r.dataset.r&&!x.demo);if(c&&confirm('Remover '+c.marca+' '+c.modelo+'?')){cars=cars.filter(x=>x.id!==c.id);save();alist();render()}}
+ if(ed){const c=cars.find(x=>x.id===ed.dataset.e&&!x.demo);if(!c)return;editing=c.id;
   ['marca','modelo','ano','km','motor','cambio','comb','cat','preco'].forEach(k=>form[k].value=c[k]);form.cor.value=c.cor||'#9a9a9f';form.semi.checked=!!c.semi;
   $('#fTitle').textContent='Editar veículo';$('#fSave').textContent='Salvar alterações';$('#fCancel').hidden=false;form.scrollIntoView({behavior:'smooth'})}
 });
@@ -349,6 +340,7 @@ function readImg(f){return new Promise(res=>{if(!f)return res(null);const r=new 
 form.addEventListener('submit',async e=>{
  e.preventDefault();const f=new FormData(form),foto=await readImg(form.foto.files[0]);
  const old=cars.find(x=>x.id===editing);
+ if(!foto&&!(old&&old.foto)){alert('Selecione uma foto para o veículo.');return}
  const c={id:editing||'v'+Date.now(),marca:f.get('marca').trim(),modelo:f.get('modelo').trim(),ano:+f.get('ano'),km:+f.get('km'),motor:f.get('motor').trim(),cambio:f.get('cambio'),comb:f.get('comb'),cat:f.get('cat'),preco:+f.get('preco'),cor:f.get('cor'),semi:form.semi.checked?1:0};
  if(old&&old.foto)c.foto=old.foto;if(foto)c.foto=foto;
  if(editing)cars=cars.map(x=>x.id===editing?c:x);else cars.unshift(c);
@@ -356,6 +348,8 @@ form.addEventListener('submit',async e=>{
 });
 $('#yr').textContent=new Date().getFullYear();
 renderFilters();render();observe();onScroll();
+if('scrollRestoration' in history)history.scrollRestoration='manual';scrollTo(0,0);
+
 })();
 </script>
 </body>
